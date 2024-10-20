@@ -8,6 +8,8 @@
   
   <link rel="stylesheet" href="./style.css">
 
+  <script type="text/javascript" src="./validation.js" defer></script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
@@ -25,7 +27,7 @@
     <div class="login-container">
       <div class="panel-1">
   <!-- Sign-up form start -->
-   <form action="submit" method="get">
+   <form id="form" action="submit" method="dialog">
         <h1 class="roboto-bold">Stay updated!</h1>
         <p style="margin-bottom:1rem;">Join 60,000+ product managers receiving monthly updates on:</p>
         <ul>
@@ -34,9 +36,11 @@
           <li><img src="/assets/images/icon-list.svg" alt="*"><p>And much more!</p></li>
         </ul>
 
-        <label class="roboto-bold" for="email">Email address</label>
-        <br>
-        <input class="textbox" type="email" name="" id="" placeholder="email@company.com">
+        <div class="space">
+          <label class="roboto-bold" for="email_input">Email address</label>
+          <label id="error-message" class="roboto-bold left" for="email_input"></label>      
+        </div>
+        <input class="textbox" type="email" id="email_input" placeholder="email@company.com">
         <button class="btn" type="submit">Subscribe to monthly newsletter</button>
    </form>
 
@@ -53,7 +57,7 @@
     <img src="./assets/images/icon-success.svg" alt="img">
     <h1>Thanks for subscribing!</h1>
     <p class="roboto-light" style="font-size: 0.75rem;">
-      A confirmation email has been sent to ash@loremcompany.com. 
+      A confirmation email has been sent to <p id="email-text"></p>. 
       Please open it and click the button inside to confirm your subscription.
     </p>
     <button class="btn" type="submit">Dismiss message</button>

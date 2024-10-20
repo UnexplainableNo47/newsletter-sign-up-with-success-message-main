@@ -69,14 +69,22 @@ label{
   font-size: 0.65rem;
 }
 .textbox{
-  height: 5vh;
-  width:92.5%;
+  box-sizing: border-box;
+  height: 7vh;
+  width: 100%;
+  border: 2px solid var(--Grey);
   border-radius: 0.4rem;
-  margin-top: 0.4rem;
+  margin-top:0.5rem;
   margin-bottom: 0.5rem;
   padding: 0.4rem 0.4rem 0.4rem 1rem;
   border-style: solid;
+  transition: 140ms ease;
 }
+.textbox:hover{
+  color: var(--Dark-Slate-Grey);
+  border-color: var(--Dark-Slate-Grey);
+}
+
 .btn{
   color: var(--White);
   background-color: var(--Dark-Slate-Grey);
@@ -86,11 +94,31 @@ label{
   border-radius: 0.4rem;
   margin-top: 0.5rem;
   margin-bottom: 0.4rem;
+  transition: 140ms ease;
+  cursor: pointer;
+}
+.btn:hover{
+  background-color: var(--Charcoal-Grey);
 }
 .incorrect{
   color: red;
   background-color: rgba(255, 0, 0, 0.164);
   border-color: red;
+}
+.incorrect label{
+  color: red;
+  }
+#error-message{
+  color: red;
+}
+.correctf{
+  color: greenyellow;
+  background-color: rgba(126, 252, 0, 0.144);
+  border-color: green;
+}
+.space{
+  display: flex;
+  justify-content: space-between;
 }
 li > img{
     margin-right: 1rem;
@@ -102,7 +130,7 @@ p{
     font-size: 0.95rem;
 }
 
-@media only screen and (max-width:720px) {
+@media only screen and (max-width:768px) {
   .login-container{
     padding: 1rem;
     display: grid;
@@ -113,8 +141,14 @@ p{
     overflow: hidden;
     border-radius: 0;
 }
+.panel-1{
+  width: min(300px,100%);
+}
+.panel-2{
+  overflow: hidden;
+}
 .panel-2 > img{
-  height: 100%;
+ height: 100%;
 }
 }
 @media only screen and (max-width:425px) {
@@ -122,29 +156,28 @@ p{
     padding: 0;
     display: grid;
     grid-template-areas: 
-    'panel-2'
-    'panel-1';
-    height: 100vh;
-    width: min(100vh, 100%);
+      'panel-2'
+      'panel-1';
+    height: 100%;
+    width: min(600px, 100%);
     background-color: var(--White);
     overflow: hidden;
     border-radius: 0;
 }
 .panel-1{
+  width: auto;
   margin: auto;
-  padding: 0;
+  padding: 0.7rem;
   grid-area: panel-1;
 }
 .panel-2 {
   overflow: hidden;
-  position: absolute;
-  height: 20vh;
-  width: 100vh;
+
+  width: min(425px,100%);
 }
 .panel-2 > img{
   margin: auto;
-  height: 100vh;
-  top: 100%;
+  height: 100%;
 }
 }
 
