@@ -50,17 +50,16 @@
     </div>
   </div>
 
-
-
   <!-- Success message start -->
-   <div class="success-panel">
+   <div id="success-panel" class="success-panel">
     <img src="./assets/images/icon-success.svg" alt="img">
     <h1>Thanks for subscribing!</h1>
-    <p class="roboto-light" style="font-size: 0.75rem;">
-      A confirmation email has been sent to <p id="email-text"></p>. 
-      Please open it and click the button inside to confirm your subscription.
+    <p class="roboto-light">
+      A confirmation email has been sent to </p>
+    <p class="roboto-light" id="email-text"></p> 
+    <p class="roboto-light">  Please open it and click the button inside to confirm your subscription.
     </p>
-    <button class="btn" type="submit">Dismiss message</button>
+    <button class="btn" type="button" onclick="closePanel()">Dismiss message</button>
    </div>
   <!-- Success message end -->
   
