@@ -25,7 +25,7 @@
     grid-template-areas: 
     'panel-1 panel-2';
     width: min-content;
-    height: min-content;
+    height: max(74vh);
     background-color: var(--White);
     border-radius: 1.50rem;
     overflow: hidden;
@@ -38,9 +38,11 @@
 }
 .panel-2{
     grid-area: panel-2;
+    width: auto;
+ 
 }
 .panel-2 > img{
-    width: 55vh;
+  height: 74vh;
 }
 .success-panel{
   top: 50%; right: 50%;
@@ -56,7 +58,7 @@
   display: none;
 }
 ul{
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 li{
     display: flex;
@@ -124,7 +126,8 @@ li > img{
     margin-right: 1rem;
 }
 h1{
-    margin-bottom: 1.35rem;
+  font-size: 2.95rem;
+  margin-bottom: 1.5rem;
 }
 p{
     font-size: 0.95rem;
@@ -137,6 +140,7 @@ p{
     grid-template-areas: 
     'panel-1 panel-2';
     width: 100%;
+    height: fit-content;
     background-color: var(--White);
     overflow: hidden;
     border-radius: 0;
@@ -207,7 +211,7 @@ p{
   
   .roboto-bold {
     font-family: "Roboto", sans-serif;
-    font-weight: 700;
+    font-weight: 900;
     font-style: normal;
   }
   

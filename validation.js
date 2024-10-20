@@ -22,9 +22,6 @@ form.addEventListener('submit', (e) =>{
 
         email_text.innerText = email_input.value;
     }
-    function closePanel(){
-        success_panel.style.display = "hidden"
-    }
 })
 
 function getSubscribeErrors(email){
@@ -36,7 +33,6 @@ function getSubscribeErrors(email){
     }
     return errors;
 }
-
 const allInputs = [email_input]
 
 allInputs.forEach(input =>{
