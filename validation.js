@@ -3,6 +3,11 @@ const email_input = document.getElementById('email_input')
 const error_message = document.getElementById('error-message')
 const success_panel = document.getElementById('success-panel')
 const email_text = document.getElementById('email-text')
+const close = document.getElementById('closePanel')
+
+close.addEventListener('click', () =>{
+    success_panel.style.removeProperty = "display"
+})
 
 form.addEventListener('submit', (e) =>{
     //e.preventDefault() prevents submit
@@ -19,7 +24,6 @@ form.addEventListener('submit', (e) =>{
         error_message.innerText = errors.join(". ")
     } else{
         success_panel.style.display = "block"
-
         email_text.innerText = email_input.value;
     }
 })
